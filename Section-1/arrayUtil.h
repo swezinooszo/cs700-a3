@@ -1,8 +1,8 @@
 /** @file arrayUtil.h
  * @author Swe Zin Oo
  * @date 16 Feb 2024
- * @brief This is the utility class of the program. It include all the functios such as sorting an array in various orders,
- * get the execution time for sorting the array and printing the array as a figure which will be used in the main program.
+ * @brief This is the utility class of the program, emcompassing all functions necessary for sorting arrays in various orders,
+ * obtaining execution times for array sorting and displaying the results as figures, which will be used in the main program.
 */
 #pragma once
 
