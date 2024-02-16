@@ -30,9 +30,9 @@ int main(){
     //// ****** Print Two Dimension array as Figure ****** ////
     printFigureForExecutedTime(executedTimeForSorting_hundredThousand);
 
-    cout << right << setw(50) << "*********************" << " HUNDRED THOUSAND ARRAY SIZE " << "*********************" << right << setw(50);
+    cout << right << setw(50) << "--------------------------------------------------" << " HUNDRED THOUSAND ARRAY SIZE " << "---------------------------------------------------" << right << setw(50);
     cout << endl;
-
+    cout << endl;
 
 
     //// **************** ONE_MILION SIZE ***************************** ////
@@ -51,9 +51,9 @@ int main(){
      //// ****** Print Two Dimension array as Figure ****** ////
     printFigureForExecutedTime(executedTimeForSorting_onemillion);
 
-    cout << right << setw(50) << "*********************" << " ONE MILLION ARRAY SIZE " << "*********************" << right << setw(50);
+    cout << right << setw(50) << "--------------------------------------------------" << " ONE MILLION ARRAY SIZE " << "---------------------------------------------------" << right << setw(50);
     cout << endl;
-
+    cout << endl;
 
 
     //// **************** TEN_MILION SIZE ***************************** ////
@@ -72,7 +72,9 @@ int main(){
      //// ****** Print Two Dimension array as Figure ****** ////
     printFigureForExecutedTime(executedTimeForSorting_tenmillion);
 
-    cout << right << setw(50) << "*********************" << " TEN MILLION ARRAY SIZE " << "*********************" << right << setw(50);
+    cout << right << setw(50) << "--------------------------------------------------" << " TEN MILLION ARRAY SIZE " << "---------------------------------------------------" << right << setw(50);
+    cout << endl;
+    cout << endl;
 
     return 0;
 }
