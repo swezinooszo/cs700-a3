@@ -1,3 +1,9 @@
+/** @file arrayUtil.cpp
+ * @author Swe Zin Oo
+ * @date 16 Feb 2024
+ * @brief The implementation file of "arrayUtil.h"
+*/
+
 #include <iostream>
 #include <cstdlib> 
 #include <chrono>
@@ -7,15 +13,14 @@
 using namespace std;
 
 
-// fill the array with integer values with defined array size
 void buildAnArray(int* arrary, int length){ 
-   // build array wiht numbers from 1 to given length
+   // fill the array with integer values with a given size
     for(int i=0;i<length;i++){
         arrary[i] = i+1;
     }
 }
 
-void generateRandomArray(int* arrary, int length){
+void sortArrayByRandomOrder(int* arrary, int length){
     //providing seed value
    srand(unsigned(time(0)));
 
@@ -26,10 +31,10 @@ void generateRandomArray(int* arrary, int length){
     }
 }
 
-long executedTimeForRandomOrder(int* arrary, int length){
+long getExecutedTimeForRandomOrder(int* arrary, int length){
     // Start the timer
     chrono::steady_clock::time_point start = chrono::steady_clock::now();
-    generateRandomArray(arrary,length);
+    sortArrayByRandomOrder(arrary,length);
     // End the timer
     chrono::steady_clock::time_point end = chrono::steady_clock::now(); 
     // Calculate the duration
@@ -41,14 +46,14 @@ long executedTimeForRandomOrder(int* arrary, int length){
     return microseconds.count();
 }
 
-void sortArrayToAscendingOrder(int* arrary, int length){
+void sortArrayByAscendingOrder(int* arrary, int length){
    sort(arrary, arrary + length);
 }
 
-long executedTimeforAscendingOrder(int* arrary, int length){
+long getExecutedTimeforAscendingOrder(int* arrary, int length){
     // Start the timer
     chrono::steady_clock::time_point start = chrono::steady_clock::now();
-    sortArrayToAscendingOrder(arrary,length);
+    sortArrayByAscendingOrder(arrary,length);
     // End the timer
     chrono::steady_clock::time_point end = chrono::steady_clock::now(); 
     // Calculate the duration
@@ -60,14 +65,14 @@ long executedTimeforAscendingOrder(int* arrary, int length){
     return microseconds.count();
 }
 
-void sortArrayToInverseOrder(int* arrary, int length){
+void sortArrayByInverseOrder(int* arrary, int length){
    sort(arrary, arrary + length,greater<int>());
 }
 
-long executedTimeforInverseOrder(int* arrary, int length){
+long getExecutedTimeforInverseOrder(int* arrary, int length){
     // Start the timer
     chrono::steady_clock::time_point start = chrono::steady_clock::now();
-    sortArrayToInverseOrder(arrary,length);
+    sortArrayByInverseOrder(arrary,length);
     // End the timer
     chrono::steady_clock::time_point end = chrono::steady_clock::now(); 
     // Calculate the duration
@@ -79,35 +84,29 @@ long executedTimeforInverseOrder(int* arrary, int length){
     return microseconds.count();
 }
 
-// store executed time by order for 10 arrays
-// ** the method will calculate the executed time for sorting the array by random, ascending and inverse orders. The executed time will also perfrom
-// ** based on number of arrays for each order.
-// ** executedTimeSorting : the two dimension array to store executed time by random , ascending and inverse orders for 10 arrays
-// ** hundredThousandArray : the array to make sorting for random , ascending and inverse orders 
-// ** arraySize: the array size to make sorting for random , ascending and inverse orders 
 void storeExecutedTimeIntoTwoDimensionArray(ExecutedTimeForSorting executedTimeForSorting,int* integerArray, int arraySize){
 
     //// ********* For ONE MILLION ARRAY ********* ////    
-    // store time taken for each sorting type: random, ascending, inverse to two-dimensional array which hold 
-    // 3 rows, each of which corresponds to a sorting
+    // store time taken for each sorting type: random, ascending, inverse into two-dimensional array which hold 
+    // 3 rows, each of which corresponds to sorting orders
     // 10 columns, each of which corresponds to an array
     for (int sortingOrder = 0; sortingOrder < NUM_OF_SORTING_ORDER; sortingOrder++){
         for(int array = 0; array < NUM_OF_ARRAYS;array++){
             //// ********* Shuffle An Array ********* ////    
             if(sortingOrder==0){
-                long time = executedTimeForRandomOrder(integerArray,arraySize);
+                long time = getExecutedTimeForRandomOrder(integerArray,arraySize);
                 //cout << "Time taken for random order: " << time << " milliseconds" << " sortingOrder " << sortingOrder   << " array " << array << endl;
                 executedTimeForSorting[sortingOrder][array] = time;
             }
             //// ********* Sort An Array to Ascending Order ********* ////    
              else if (sortingOrder==1){
-                long time = executedTimeforAscendingOrder(integerArray,arraySize);
+                long time = getExecutedTimeforAscendingOrder(integerArray,arraySize);
                // cout << "Time taken for ascending order: " << time << " milliseconds" << " sortingOrder " << sortingOrder   << " array " << array << endl;
                 executedTimeForSorting[sortingOrder][array] = time;
             }
             //// ********* Sort An Array to inverse Order ********* ////    
              else if (sortingOrder==2){
-                long time = executedTimeforInverseOrder(integerArray,arraySize);
+                long time = getExecutedTimeforInverseOrder(integerArray,arraySize);
                // cout << "Time taken for inverse order: " << time << " milliseconds" << " sortingOrder " << sortingOrder   << " array " << array << endl;
                 executedTimeForSorting[sortingOrder][array] = time;
             }
@@ -117,7 +116,7 @@ void storeExecutedTimeIntoTwoDimensionArray(ExecutedTimeForSorting executedTimeF
 
 void printFigureForExecutedTime(ExecutedTimeForSorting executedTimeForSorting){
     
-    cout << right << setw(14) << "Ordering\\Array";
+    cout << right << setw(14) << "Order\\Array";
     for(int array=0;array<NUM_OF_ARRAYS;array++){
         cout << right << setw(11) << array+1;
     }
