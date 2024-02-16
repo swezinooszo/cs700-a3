@@ -34,9 +34,11 @@ long executedTimeForRandomOrder(int* arrary, int length){
     chrono::steady_clock::time_point end = chrono::steady_clock::now(); 
     // Calculate the duration
     chrono::milliseconds duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    // Convert milliseconds to microseconds
+    chrono::microseconds microseconds = chrono::duration_cast<chrono::microseconds>(duration);
     // Print the duration in seconds
     //cout << "Time taken for random order : " << duration.count() << " milliseconds" << endl;
-    return duration.count();
+    return microseconds.count();
 }
 
 void sortArrayToAscendingOrder(int* arrary, int length){
@@ -51,9 +53,11 @@ long executedTimeforAscendingOrder(int* arrary, int length){
     chrono::steady_clock::time_point end = chrono::steady_clock::now(); 
     // Calculate the duration
     chrono::milliseconds duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    // Convert milliseconds to microseconds
+    chrono::microseconds microseconds = chrono::duration_cast<chrono::microseconds>(duration);
     // Print the duration in seconds
     //cout << "Time taken for ascending order: " << duration.count() << " milliseconds" << endl;
-    return duration.count();
+    return microseconds.count();
 }
 
 void sortArrayToInverseOrder(int* arrary, int length){
@@ -68,9 +72,11 @@ long executedTimeforInverseOrder(int* arrary, int length){
     chrono::steady_clock::time_point end = chrono::steady_clock::now(); 
     // Calculate the duration
     chrono::milliseconds duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    // Convert milliseconds to microseconds
+    chrono::microseconds microseconds = chrono::duration_cast<chrono::microseconds>(duration);
     // Print the duration in seconds
     // cout << "Time taken for inverse order: " << duration.count() << " milliseconds" << endl;
-    return duration.count();
+    return microseconds.count();
 }
 
 // store executed time by order for 10 arrays
