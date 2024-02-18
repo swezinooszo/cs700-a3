@@ -1,9 +1,13 @@
 # About The Project
 
 The purpose of this program is to perform white-box testing on the existing sine and cosine functions to ensure their accuracy across various angles. These straightforward functions compute the sine and cosine values of an angle, presenting the output in ten-thousandths.
+
 To ensure the program's functionality, we will test both functions across angles ranging from 0 to 360 degrees. Specifically, we'll examine 14 angles, including key angles like 0, 30, 45, 60, 90, 180, and 270. Subsequently, we'll compare the actual values with the expected ones and display the test results as either pass or fail.
+
 Verifying negative values is a crucial aspect of white-box testing, ensuring the program appropriately handles negative input. Thus, test cases for different negative angles will be executed and verified.
+
 Furthermore, extreme small values, such as 8, 15, 23, and 11 degrees, will undergo testing and validation to detect any potential overflow or underflow concerns.
+
 Finally, test cases encompassing angles beyond 360 degrees, such as 390, 420, and 450, are integrated into this white-box testing to guarantee the proper handling of values beyond a single cycle by the functions.
 
 # Build With
@@ -31,13 +35,14 @@ Please follow the below steps to run the program:
   
 # Sample Output
 A white-box test result for testing sine and cosine functions with different test cases.
-**Sine Function**
 
-![figure](./Section-2/screenshot/whitebox-test-sine.png)
+#### Sine Function
 
-**Cosine Function**
+![sine](./Section-2/screenshots/whitebox-test-sine.png)
 
-![figure](./Section-2/screenshot/whitebox-test-cosine.png)
+#### Cosine Function
+
+![cosine](./Section-2/screenshots/whitebox-test-cosine.png)
 
 
 
