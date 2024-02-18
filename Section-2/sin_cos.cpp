@@ -122,7 +122,7 @@ void verifyForCosine(int x,int expectedOutput){
 
 // Driver Program
 int main(){
-   cout << "*********************** Test for Sine Function **********************" << endl; cout << endl;
+  cout << "*********************** Test for Sine Function **********************" << endl; cout << endl;
   //// *************** Test for Sine Function ************ ////
   //// *************** Test Angles: 0 to 90 ******************  ////
   // Test for 0 degree
@@ -170,7 +170,7 @@ int main(){
   verifyForSine(-60,8660);
   // Test for -90 degree
   verifyForSine(-90,9999);
-  cout << "---------------------- Test for Negative Angles---------------------" << endl;cout << endl;
+  cout << "---------------------- Test for Negative degree --------------------" << endl;cout << endl;
 
   //// *************** Test extreme small Angles ************ ////
   // Test for 390 degree
@@ -192,9 +192,10 @@ int main(){
   verifyForSine(420,8660);
   // Test for 450 degree
   verifyForSine(450,9999);
- cout << "------------------------- Test beyond 360----------------------------" << endl;cout << endl;
+  cout << "----------------------- Test beyond 360 degree ---------------------" << endl;cout << endl;cout << endl;
 
 
+  cout << "********************** Test for Cosine Function **********************" << endl; cout << endl;
   //// *************** Test for Cosine Function ************ ////
   //// *************** Check Angles: 0 to 90 ******************  ////
   // Test for 0 degree
@@ -207,6 +208,7 @@ int main(){
   verifyForCosine(60,4999);
   // Test for 90 degree
   verifyForCosine(90,0);
+  cout << "---------------------- Test Angles: 0 to 90-------------------------" << endl; cout << endl;
 
   // //// *************** Check Angles: 90 to 180 ******************  ////
   // Test for 120 degree
@@ -217,6 +219,7 @@ int main(){
   verifyForCosine(150,-8660);
   // Test for 180 degree
   verifyForCosine(180,-9999);
+  cout << "---------------------- Test Angles: 90 to 180 ----------------------" << endl;cout << endl;
 
   // //// *************** Check Angles: 180 to 360 ******************  ////
   // Test for 210 degree
@@ -229,8 +232,9 @@ int main(){
   verifyForCosine(270,0); // to check online -0
   // Test for 360 degree
   verifyForCosine(360,9999);
+  cout << "---------------------- Test Angles: 180 to 360 ---------------------" << endl;cout << endl;
 
-  // //// *************** Test for Negative Angles ************ //// to check output is - or +
+  // //// *************** Test for Negative degrees ************ //// to check output is - or +
   // Test for -30 degree
   verifyForCosine(-30,8660);
   // Test for -45 degree
@@ -239,7 +243,7 @@ int main(){
   verifyForCosine(-60,4999);
   // Test for -90 degree
   verifyForCosine(-90,0);
-
+  cout << "---------------------- Test for Negative degree --------------------" << endl;cout << endl;
 
   //// *************** Test extreme small Angles ************ ////
   // Test for 390 degree
@@ -250,6 +254,7 @@ int main(){
   verifyForCosine(23,9203);
   // Test for 450 degree
   verifyForCosine(31,8571);
+  cout << "---------------------- Test extreme small Angles -------------------"<< endl;cout << endl;
 
   // //// *************** Test beyond 360 ************ ////
   // Test for 390 degree
@@ -260,7 +265,7 @@ int main(){
   verifyForCosine(420,4999);
   // Test for 450 degree
   verifyForCosine(450,0);
-
+  cout << "----------------------- Test beyond 360 degree ---------------------" << endl;cout << endl;
 
   return 0;
 
