@@ -70,4 +70,4 @@ A white-box test result for testing sine and cosine functions with different tes
 The location of the external document is cs700-a3/Section-2/doc/html/index.html
 
 # Contact
-[swezinoo410@gmail.
+swezinoo410@gmail.com
