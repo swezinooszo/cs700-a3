@@ -27,6 +27,7 @@ Please follow the below steps to run the program:
   
 # Sample Output
 The figure below illustrates the execution times for ten arrays of different sizes (Hundred Thousand, One Million, Ten Million), sorted randomly, in ascending order, and in descending order.
+
 ![figure](./Section-1/screenshot/test_sample.png)
 
 # External Document
