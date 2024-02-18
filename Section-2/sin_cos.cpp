@@ -6,6 +6,7 @@
 */
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
 // Forward declarations
@@ -158,18 +159,18 @@ int main(){
   // Test for 270 degree
   verifyForSine(270,-9999);
   // Test for 360 degree
-  verifyForSine(360,0); // to check online is -0
+  verifyForSine(360,0);
   cout << "---------------------- Test Angles: 180 to 360 ---------------------" << endl;cout << endl;
 
-  //// *************** Test for Negative Angles ************ //// to check output is - or +
+  //// *************** Test for Negative Angles ************ ////
   // Test for -30 degree
-  verifyForSine(-30,4999);
+  verifyForSine(-30,-4999);
   // Test for -45 degree
-  verifyForSine(-45,7071);
+  verifyForSine(-45,-7071);
   // Test for -60 degree
-  verifyForSine(-60,8660);
+  verifyForSine(-60,-8660);
   // Test for -90 degree
-  verifyForSine(-90,9999);
+  verifyForSine(-90,-9999);
   cout << "---------------------- Test for Negative degree --------------------" << endl;cout << endl;
 
   //// *************** Test extreme small Angles ************ ////
@@ -229,7 +230,7 @@ int main(){
   // Test for 240 degree
   verifyForCosine(240,-4999);
   // Test for 270 degree
-  verifyForCosine(270,0); // to check online -0
+  verifyForCosine(270,0);
   // Test for 360 degree
   verifyForCosine(360,9999);
   cout << "---------------------- Test Angles: 180 to 360 ---------------------" << endl;cout << endl;
@@ -256,7 +257,7 @@ int main(){
   verifyForCosine(31,8571);
   cout << "---------------------- Test extreme small Angles -------------------"<< endl;cout << endl;
 
-  // //// *************** Test beyond 360 ************ ////
+  // // //// *************** Test beyond 360 ************ ////
   // Test for 390 degree
   verifyForCosine(390,8660);
   // Test for 405 degree
