@@ -1,9 +1,13 @@
-/** These functions compute the sine and cosine of an angle
-    expressed in degrees. The result will be
-    an integer representing the sine or cosine as
-    ten-thousandths. For example, a result of 7071 represents
-    7071e-4 or 0.7071.
+/** @file sin_cos.cpp
+*   @author Swe Zin Oo
+*   @date 18 Feb 2024
+*   @brief The "sin_cos.cpp" file includes calculation of sine and cosine of an angle expressed in degrees.
+*         The result will be an integer representing the sine or cosine as ten-thousandths. 
+*         For example, a result of 7071 represents 7071e-4 or 0.7071. The purpose of this program is to do
+*         a white-box testing to ensure all these functions work correctly with different angles. A test driver
+*         is utilized to undergo testing and validation, determining the test result (pass or fail).
 */
+
 #include <iostream>
 #include <iomanip>
 #include <cmath>
@@ -121,7 +125,11 @@ void verifyForCosine(int x,int expectedOutput){
   }
 }
 
-// Driver Program
+
+/** A test driver which is the main function, calls verifyForSine() and verifyForCosine() functions to test and verify sine() and cosine() functions 
+ *  with different test cases. Afterward, the test results produced by verifyForSine() and verifyForCosine() functions will be displayed.
+*/
+
 int main(){
   cout << "*********************** Test for Sine Function **********************" << endl; cout << endl;
   //// *************** Test for Sine Function ************ ////
