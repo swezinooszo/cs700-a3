@@ -28,7 +28,7 @@ The c++ program is built using Visual Studio Code on MacOS.
 ## Usage
 Please follow the below steps to run the program:
  
-1. Open Section-1 project from IDE
+1. Open Section-2 project from IDE
 2. Run the command in terminal 
     - g++ sin_cos.cpp -o main
     - ./main
